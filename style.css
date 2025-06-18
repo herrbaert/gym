@@ -4,11 +4,32 @@ header{
 }
 
 body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr, 200px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header"
+        "main aside"
+        "footer footer";
+    min-height: 100vh;
+    gap: 20px;
     background-color: antiquewhite;
     font-family: Verdana, sans-serif;
     font-size: 14px;
-    margin: 40px;
+    margin: 0;
 }
+
+header { grid-area: header;}
+main { grid-area: main;}
+aside { grid-area: aside;}
+footer {grid-area: footer;}
+
+
+/* .course-table{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+} */
 
 h1{
     font-family: Arial, sans-serif;
@@ -38,5 +59,21 @@ h3{
     border: solid 2px;
     padding: 0;
     justify-content: center;
-    gap: 20px;
+    gap: 3rem;
+}
+
+.card-container{
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    border: solid 2px;
+    border-radius: 3px;
+}
+
+.card{
+    border: solid 2px;
+    border-radius: 3px;
+    padding: 2rem;
+    justify-content: center;
+    background-color: burlywood;
 }
