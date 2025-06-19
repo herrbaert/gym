@@ -1,186 +1,264 @@
-h1,
-h2,
-h3 {
-    border: 2px solid black !important;
-}
-
-body,
-header,
-main,
-aside,
-footer {
-    border: 2px solid black;
-}
-
-
-
-nav {
-    background-color: #ff9505;
-    color: white;
-    padding: 0.3rem;
-    text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline-block;
-    margin: 0 1rem;
-}
-
-nav a {
-    color: #997b66;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-h1 {
-    font-family: Arial, sans-serif;
-    text-align: center;
-
-}
-
-h2 {
-    font-family: Georgia, 'Times New Roman', Times, sans-serif;
-    text-align: center;
-}
-
-h3 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+/* =========================================
+   Globales Layout & Grundfarben (Dark Theme)
+   ========================================= */
 
 body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #2e1e24; /* Dunkelpflaume */
+    color: #f0e1d8; /* Helles Beige */
+    margin: 0;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    grid-template-columns: 1fr 200px;
+    grid-template-columns: 1fr 250px;
     grid-template-areas:
         "header header"
         "main aside"
         "footer footer";
     min-height: 100vh;
-    gap: 0.5rem;
-    background-color: #f2a65a;
-    font-family: Verdana, sans-serif;
-    font-size: 14px;
-    margin: 0;
+    gap: 1rem;
 }
+
+/* =========================================
+   Layout-Bereiche
+   ========================================= */
 
 header {
     grid-area: header;
-    padding: 0.5rem;
-
+    background-color: #b46b7a; /* Dunkelrosé */
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 main {
     grid-area: main;
+    padding: 1rem;
 }
 
 aside {
     grid-area: aside;
+    padding: 1rem;
+    background-color: #3a2a30; /* Abgesetztes Dunkelbraun */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 footer {
     grid-area: footer;
-}
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin: 0.5rem;
-    border: 2px solid black;
-    border-radius: 8px;
-}
-
-section {
-    background-color: #db7c26;
+    background-color: #d69a85; /* Terrakotta */
+    color: #2e1e24;
+    text-align: center;
     padding: 1rem;
-    margin: 0.5rem 0;
-    border-radius: 12px;
 }
 
+/* =========================================
+   Navigation
+   ========================================= */
 
-.debug-body {border: 2px solid #d08c60;}
+nav {
+    background-color: #914f60; /* Tieferer Rosé-Ton */
+    padding: 0.5rem;
+    text-align: center;
+}
 
-.main-nav-list {
-    display: flex;
+nav ul {
     list-style: none;
+    margin: 0;
     padding: 0;
+    display: flex;
     justify-content: center;
     gap: 1rem;
-
 }
+
+nav a {
+    color: #f5e5da;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #b46b7a;
+}
+
+/* =========================================
+   Typografie
+   ========================================= */
+
+h1 {
+    font-size: 2rem;
+    color: #f0e1d8;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #f0e1d8;
+    margin-top: 2rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: #d69a85;
+}
+
+p {
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+/* =========================================
+   Karten-Stil
+   ========================================= */
 
 .card-container {
     display: flex;
-    gap: 0.2rem;
     flex-wrap: wrap;
+    gap: 1rem;
     justify-content: center;
 }
 
 .card {
-    transition: transform 0.3s ease;
-    border: solid 2px;
-    border-radius: 8px;
+    background-color: #3d2c33;
+    border-radius: 10px;
     padding: 1rem;
-    margin: 0.5rem;
-    justify-content: center;
-    background-color: #585123;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    width: 250px;
     text-align: center;
-    list-style: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
 }
+
+/* =========================================
+   Features / Abschnittshervorhebung
+   ========================================= */
 
 .features-section {
-    padding: 40px;
-    background-color: #f2a65a;
+    background-color: #4b3740; /* Sanft abgesetzte Fläche */
+    border-radius: 12px;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
 }
 
-.kursplan {
+/* =========================================
+   Tabelle (Kursplan)
+   ========================================= */
 
-    font-weight: bold;
-    font-size: 1.5rem;
-    border: 2px solid;
-}
-
-.course-table {
-    border-collapse: collapse;
+table.course-table {
     width: 100%;
-    border: 2px solid black;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #f0e1d8;
+}
+
+.course-table caption {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    color: #ffd6d6;
 }
 
 .course-table th,
 .course-table td {
-    border: 1px solid #000000;
-    padding: 12px;
-    text-align: left;
+    border: 1px solid #555;
+    padding: 0.75rem;
+    text-align: center;
 }
 
 .course-table th {
-    background-color: #f2a65a;
-    font-weight: bold;
+    background-color: #b46b7a;
 }
 
+/* =========================================
+   Formularbereich (Mitglied werden)
+   ========================================= */
+
+form {
+    background-color: #3a2a30;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    margin-top: 2rem;
+}
+
+fieldset {
+    border: 1px solid #666;
+    border-radius: 6px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+legend {
+    font-weight: bold;
+    color: #f5e5da;
+}
+
+label {
+    display: block;
+    margin: 0.5rem 0;
+    color: #f0e1d8;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+input[type="color"],
+input[type="range"],
+textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #555;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #2e1e24;
+    color: #f5e5da;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #b46b7a;
+    box-shadow: 0 0 3px rgba(180, 107, 122, 0.6);
+}
+
+/* Button-Stil */
+button[type="submit"] {
+    background-color: #b46b7a;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #914f60;
+}
+
+/* =========================================
+   Meter-Anzeige
+   ========================================= */
+
+meter {
+    width: 100%;
+    height: 1rem;
+}
+
+/* =========================================
+   Responsive für mobile Geräte
+   ========================================= */
+
 @media (max-width: 768px) {
-    .main-nav-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .card-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
     body {
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -188,15 +266,19 @@ section {
             "main"
             "aside"
             "footer";
-        font-size: 14px;
     }
 
-    h1 {
-        font-size: 24px;
+    nav ul {
+        flex-direction: column;
+        align-items: center;
     }
 
-    body {
-        font-size: 14px;
+    .card-container {
+        flex-direction: column;
+        align-items: center;
     }
 
+    table.course-table {
+        font-size: 0.85rem;
+    }
 }
